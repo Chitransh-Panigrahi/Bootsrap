@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Question 4 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+
+  <canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+  <script>
+    var xValues = ["Friday (11/11/2022)", "Saturday (12/11/2022)", "Sunday (13/11/2022)", "Monday (14/11/2022)", "Tuesday (15/11/2022)", "Wednesday (16/11/2022)", "Thursday (17/11/2022)"];
+    var yValues = [30, 29.1, 29.2, 29.3, 29.1, 29.5, 30];
+    var barColors = ["red", "green", "blue", "orange", "brown", "yellow", "pink"];
+
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: "Weather Data Of Last 7 Days"
+        }
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+
+<br>
+<hr>
+<br>
+
+  <script>
+    var xValues = ["Friday (11/11/2022)", "Saturday (12/11/2022)", "Sunday (13/11/2022)", "Monday (14/11/2022)", "Tuesday (15/11/2022)", "Wednesday (16/11/2022)", "Thursday (17/11/2022)"];
+    var yValues = [30, 29.1, 29.2, 29.3, 29.1, 29.5, 30];
+    var barColors = ["red", "green", "blue", "orange", "brown", "yellow", "pink"];
+
+    new Chart("myChart", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
